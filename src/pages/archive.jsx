@@ -1,5 +1,5 @@
 import Head from 'next/head';
-
+import NextLink from 'next/link';
 import { getAllPosts } from '../lib/api.js';
 import Link from '../components/Link.jsx';
 
@@ -9,6 +9,10 @@ const Archive = ({ posts }) => {
       <Head>
         <title>{'Archive'}</title>
       </Head>
+      <form id="search" action="/search/" method="get">
+        <input type="text" id="search-input" name="query" placeholder="Type here to search" />
+        <input type="submit" value="search"/>
+      </form>
       <h1>{'Archive'}</h1>
       <ul>
         {posts.map((p) => (

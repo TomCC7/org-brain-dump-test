@@ -109,4 +109,4 @@ export async function getPostBySlug(slug) {
 export async function getAllPosts() {
   const posts = await allPosts();
   return await Promise.all(Object.values(posts));
-}
+};
